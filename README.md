@@ -56,7 +56,7 @@ random
 
 ### 1️⃣ 克隆或下载仓库
 ```bash
-git clone https://github.com/<your-username>/MHtoolX.git
+git clone https://github.com/sudo1123/MHtoolX.git
 cd MHtoolX
 ```
 
