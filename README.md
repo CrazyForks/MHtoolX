@@ -1,11 +1,11 @@
-# MHtoolX v1.0.0
+# MHtoolX
 *A multifunctional interactive mathematical tool / 多功能交互式数学工具*
 
 ---
 
 ## 📘 Overview | 概述
 
-**MHtoolX v1.0.0** 是一个基于 Python 的命令行交互式数学计算工具，支持多种数学功能，如：
+**MHtoolX** 是一个基于 Python 的命令行交互式数学计算工具，支持多种数学功能，如：
 - 基础算术、阶乘、质因数分解、质数检测  
 - 几何与三角函数绘图（基于 `turtle`）  
 - 统计分析（均值、方差、标准差、中位数、众数）  
@@ -127,9 +127,4 @@ MIT License © 2025 QU QI
 
 ---
 
-## 🌐 Future Plans | 后续计划
 
-- 增加 GUI 界面（Tkinter 或 PyQt）
-- 支持更复杂的符号计算（基于 `sympy`）
-- 增强统计与绘图模块
-- 优化输入验证与错误处理机制  
