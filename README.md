@@ -62,7 +62,7 @@ cd MHtoolX
 
 ### 2️⃣ 运行程序
 ```bash
-python MHtoolX-v1.0.0.py
+python MHtoolX-v1.1.0.py
 ```
 
 ### 3️⃣ 使用交互命令
@@ -122,7 +122,7 @@ MIT License © 2025 QU QI
 ## 🧠 Author | 作者
 
 **Author:** QU QI  
-**Version:** MHtoolX v1.0.0  
+**Version:** MHtoolX v1.1.0  
 **Release Date:** 2025  
 
 ---
