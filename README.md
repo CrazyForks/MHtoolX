@@ -1,11 +1,13 @@
-# MHtoolX v1.2.0  
+根据您提供的 MHtoolX v1.3.0 源代码，我来更新 README 文件：
+
+# MHtoolX v1.3.0  
 *A multifunctional interactive mathematical tool / 多功能交互式数学工具*
 
 ---
 
 ## 📘 Overview | 概述
 
-**MHtoolX v1.2.0** 是一个基于 Python 的命令行交互式数学计算工具，支持31+种数学功能，包括：
+**MHtoolX v1.3.0** 是一个基于 Python 的命令行交互式数学计算工具，支持31+种数学功能，包括：
 - 基础算术、阶乘、质因数分解、质数检测  
 - 几何与三角函数绘图（基于 `turtle`）
 - 统计分析（均值、方差、标准差、中位数、众数）
@@ -105,11 +107,11 @@ collections
 ## 🚀 How to Run | 使用方法
 
 ### 1️⃣ 下载程序
-下载 `MHtoolX-v1.2.0.py` 文件
+下载 `MHtoolX-v1.3.0.py` 文件
 
 ### 2️⃣ 运行程序
 ```bash
-python MHtoolX-v1.2.0.py
+python MHtoolX-v1.3.0.py
 ```
 
 ### 3️⃣ 使用交互命令
@@ -134,9 +136,7 @@ python MHtoolX-v1.2.0.py
 | `result.json` | 保存历史计算结果 |
 | `history.json` | 保存用户操作记录 |
 | `number saved.json` | 已保存结果计数 |
-| `mode.json` | 结果保存模式设置 |
-| `No_History.json` | 操作历史保存设置 |
-| `picture_choice.json` | 图像保存功能开关 |
+| `config.json` | 程序配置设置（历史保存、结果保存、图像保存等） |
 
 **管理命令**：
 - `er`：导出历史计算结果到 `result.txt`
@@ -201,17 +201,21 @@ MIT License © 2025 QU QI
 ## 🧠 Author | 作者
 
 **Author:** QU QI  
-**Version:** MHtoolX v1.2.0  
-**Release Date:** 2025
+**Version:** MHtoolX v1.3.0  
+**Release Date:** 20251027
 
 ---
 
 ## 🔄 Update Log | 更新日志
 
+### v1.3.0 更新内容：
+- 改进了配置文件管理，统一使用 `config.json`
+- 不再默认启用number saved记录功能
+
 ### v1.2.0 新增功能：
 - 矩阵加减乘法（功能31）
 
-### v1.1.0 功能：
+### v1.1.0 新增功能：
 - 三阶方阵行列式计算（功能30）
 
 > 💡 提示：程序支持分页菜单导航，输入 `menu` 可浏览所有可用功能！
