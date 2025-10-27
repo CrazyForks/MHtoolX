@@ -1,5 +1,3 @@
-根据您提供的 MHtoolX v1.3.0 源代码，我来更新 README 文件：
-
 # MHtoolX v1.3.0  
 *A multifunctional interactive mathematical tool / 多功能交互式数学工具*
 
