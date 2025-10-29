@@ -1,11 +1,11 @@
-# MHtoolX v1.4.0  
+# MHtoolX v1.4.1  
 *A multifunctional interactive mathematical tool / 多功能交互式数学工具*
 
 ---
 
 ## 📘 Overview | 概述
 
-**MHtoolX v1.4.0** 是一个基于 Python 的命令行交互式数学计算工具，支持32+种数学功能，包括：
+**MHtoolX v1.4.1** 是一个基于 Python 的命令行交互式数学计算工具，支持32+种数学功能，包括：
 - 基础算术、阶乘、质因数分解、质数检测  
 - 几何与三角函数绘图（基于 `turtle`）
 - 统计分析（均值、方差、标准差、中位数、众数）
@@ -109,11 +109,11 @@ collections
 ## 🚀 How to Run | 使用方法
 
 ### 1️⃣ 下载程序
-下载 `MHtoolX-v1.4.0.py` 文件
+下载 `MHtoolX-v1.4.1.py` 文件
 
 ### 2️⃣ 运行程序
 ```bash
-python MHtoolX-v1.4.0.py
+python MHtoolX-v1.4.1.py
 ```
 
 ### 3️⃣ 使用交互命令
@@ -215,12 +215,14 @@ MIT License © 2025 QU QI
 ## 🧠 Author | 作者
 
 **Author:** QU QI  
-**Version:** MHtoolX v1.4.0  
-**Release Date:** 20251028
+**Version:** MHtoolX v1.4.1  
+**Release Date:** 20251030
 
 ---
 
 ## 🔄 Update Log | 更新日志
+### v1.4.1 更新内容：
+- 修复了缺失功能32第2分支功能日志的问题
 
 ### v1.4.0 更新内容：
 - 新增功能32：常见数学模型计算（复利计算、半衰期计算、人口增长模型）
