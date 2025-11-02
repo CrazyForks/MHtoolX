@@ -1,4 +1,4 @@
-# MHtoolX v2.0.0 / 多功能交互式数学工具
+# MHtoolX v2.1.0 / 多功能交互式数学工具
 
 [English](#english) | [中文](#chinese)
 
@@ -6,7 +6,7 @@
 ## 中文文档
 
 ### 项目简介
-MHtoolX v2.0.0 是一个基于 Python 的命令行交互式数学计算工具，支持33+种数学功能，涵盖从基础算术到高级数学模型的广泛领域。该工具提供 **交互式菜单导航** 与 **结果导出功能**，适合教学、科研及学习用途。
+MHtoolX v2.1.0 是一个基于 Python 的命令行交互式数学计算工具，支持33+种数学功能，涵盖从基础算术到高级数学模型的广泛领域。该工具提供 **交互式菜单导航** 与 **结果导出功能**，适合教学、科研及学习用途。
 
 ### 功能特性
 
@@ -47,7 +47,7 @@ MHtoolX v2.0.0 是一个基于 Python 的命令行交互式数学计算工具，
 
 #### 📈 矩阵与线性代数
 - `30` - 三阶方阵行列式计算
-- `31` - 矩阵加减乘法
+- `31` - 矩阵运算（加法、减法、乘法、转置）**← 新增功能**
 
 #### 💰 金融与数学模型
 - `32` - 常见数学模型计算（复利计算、半衰期计算、人口增长模型）
@@ -105,11 +105,11 @@ collections
 ### 使用方法
 
 #### 1️⃣ 下载程序
-下载 `MHtoolX-v2.0.0.py` 和 `translation.json` 文件
+下载 `MHtoolX-v2.1.0.py` 和 `translation.json` 文件
 
 #### 2️⃣ 运行程序
 ```bash
-python MHtoolX-v2.0.0.py
+python MHtoolX-v2.1.0.py
 ```
 
 #### 3️⃣ 使用交互命令
@@ -146,17 +146,42 @@ python MHtoolX-v2.0.0.py
 圆周率约为 3.14184
 ```
 
+#### 矩阵转置操作
+```
+请输入指令: 31
+请选择方法（加法请输1，减法请输2，乘法请输3，转置请输4）4
+请输入所要计算矩阵的行数: 2
+请输入所要计算矩阵的列数: 3
+现在开始设置第1个矩阵:
+现在为第1行
+请依次输入方阵中的元素(从左往右): 1
+请依次输入方阵中的元素(从左往右): 2
+请依次输入方阵中的元素(从左往右): 3
+1.0 2.0 3.0 
+现在为第2行
+请依次输入方阵中的元素(从左往右): 4
+请依次输入方阵中的元素(从左往右): 5
+请依次输入方阵中的元素(从左往右): 6
+1.0 2.0 3.0 4.0 5.0 6.0 
+结果:
+1.0 4.0 
+2.0 5.0 
+3.0 6.0 
+```
+
 #### 修改语言
 ```
 请输入指令: language
 Select language / 选择语言 (1 for English, 2 for 中文): 1
 Language changed / 语言已更改
+The program needs to be restarted. Press the Enter key to continue
+程序需要重启，按回车键继续
 ```
 
 ### 文件结构
 ```
 .
-├── MHtoolX-v2.0.0.py    # 主程序文件
+├── MHtoolX-v2.1.0.py    # 主程序文件
 ├── translation.json      # 语言翻译配置
 ├── config.json           # 程序配置（自动生成）
 ├── history.json          # 操作历史（自动生成）
@@ -169,10 +194,15 @@ MIT License © 2025 QU QI
 
 ### 作者
 **作者:** QU QI  
-**版本:** MHtoolX v2.0.0  
-**发布日期:** 2025
+**版本:** MHtoolX v2.1.0  
+**发布日期:** 20251102
 
 ### 更新日志
+
+#### v2.1.0 主要更新：
+- **矩阵转置功能**：在功能31中新增矩阵转置运算
+- **语言切换优化**：修改语言后自动提示重启程序
+- **翻译更新**：同步更新了中英文翻译文件
 
 #### v2.0.0 主要更新：
 - **多语言支持**：添加完整的英文翻译系统
@@ -184,7 +214,7 @@ MIT License © 2025 QU QI
 ## English Documentation
 
 ### Project Introduction
-MHtoolX v2.0.0 is a comprehensive Python-based command-line interactive mathematical calculation tool supporting 33+ mathematical functions, covering a wide range from basic arithmetic to advanced mathematical models. The tool provides **interactive menu navigation** and **result export functionality**, suitable for teaching, research, and learning purposes.
+MHtoolX v2.1.0 is a comprehensive Python-based command-line interactive mathematical calculation tool supporting 33+ mathematical functions, covering a wide range from basic arithmetic to advanced mathematical models. The tool provides **interactive menu navigation** and **result export functionality**, suitable for teaching, research, and learning purposes.
 
 ### Features
 
@@ -225,7 +255,7 @@ MHtoolX v2.0.0 is a comprehensive Python-based command-line interactive mathemat
 
 #### 📈 Matrix & Linear Algebra
 - `30` - Calculate 3x3 matrix determinant
-- `31` - Matrix operations (addition, subtraction, multiplication)
+- `31` - Matrix operations (addition, subtraction, multiplication, **transposition**) **← New Feature**
 
 #### 💰 Finance & Mathematical Models
 - `32` - Mathematical models (compound interest, half-life, population growth)
@@ -283,11 +313,11 @@ collections
 ### Usage
 
 #### 1️⃣ Download Program
-Download `MHtoolX-v2.0.0.py` and `translation.json` files
+Download `MHtoolX-v2.1.0.py` and `translation.json` files
 
 #### 2️⃣ Run Program
 ```bash
-python MHtoolX-v2.0.0.py
+python MHtoolX-v2.1.0.py
 ```
 
 #### 3️⃣ Use Interactive Commands
@@ -324,17 +354,41 @@ Calculating: 100%
 Pi is approximately 3.14184
 ```
 
+#### Matrix Transposition
+```
+Enter command: 31
+Enter 1 for addition, 2 for subtraction, 3 for multiplication, or 4 for transposition: 4
+Please enter number of rows: 2
+Please enter number of columns: 3
+Now setting up matrix 1:
+Now for row 1
+Please enter matrix elements (left to right): 1
+Please enter matrix elements (left to right): 2
+Please enter matrix elements (left to right): 3
+1.0 2.0 3.0 
+Now for row 2
+Please enter matrix elements (left to right): 4
+Please enter matrix elements (left to right): 5
+Please enter matrix elements (left to right): 6
+1.0 2.0 3.0 4.0 5.0 6.0 
+Result:
+1.0 4.0 
+2.0 5.0 
+3.0 6.0 
+```
+
 #### Change Language
 ```
 Enter command: language
 Select language / 选择语言 (1 for English, 2 for 中文): 1
 Language changed / 语言已更改
+The program needs to be restarted. Press the Enter key to continue
 ```
 
 ### File Structure
 ```
 .
-├── MHtoolX-v2.0.0.py    # Main program file
+├── MHtoolX-v2.1.0.py    # Main program file
 ├── translation.json      # Language translation configuration
 ├── config.json           # Program configuration (auto-generated)
 ├── history.json          # Operation history (auto-generated)
@@ -347,14 +401,16 @@ MIT License © 2025 QU QI
 
 ### Author
 **Author:** QU QI  
-**Version:** MHtoolX v2.0.0  
-**Release Date:** 2025
+**Version:** MHtoolX v2.1.0  
+**Release Date:** 20251102
 
 ### Update Log
+
+#### v2.1.0 Major Updates:
+- **Matrix Transposition**: Added matrix transposition operation in function 31
+- **Language Switching Optimization**: Automatic restart prompt after language change
+- **Translation Updates**: Synchronized Chinese and English translation files
 
 #### v2.0.0 Major Updates:
 - **Multi-language Support**: Added comprehensive English translation system
 - **Language Switching**: Real-time language switching without restart
-
-- **Code Optimization**: Refactored core algorithms for better performance
-- **User Experience**: Improved menu navigation and error handling
