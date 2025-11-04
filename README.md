@@ -1,4 +1,4 @@
-# MHtoolX v2.1.0 / 多功能交互式数学工具
+# MHtoolX v2.1.1 / 多功能交互式数学工具
 
 [English](#english) | [中文](#chinese)
 
@@ -6,7 +6,7 @@
 ## 中文文档
 
 ### 项目简介
-MHtoolX v2.1.0 是一个基于 Python 的命令行交互式数学计算工具，支持33+种数学功能，涵盖从基础算术到高级数学模型的广泛领域。该工具提供 **交互式菜单导航** 与 **结果导出功能**，适合教学、科研及学习用途。
+MHtoolX v2.1.1 是一个基于 Python 的命令行交互式数学计算工具，支持33+种数学功能，涵盖从基础算术到高级数学模型的广泛领域。该工具提供 **交互式菜单导航** 与 **结果导出功能**，适合教学、科研及学习用途。
 
 ### 功能特性
 
@@ -47,7 +47,7 @@ MHtoolX v2.1.0 是一个基于 Python 的命令行交互式数学计算工具，
 
 #### 📈 矩阵与线性代数
 - `30` - 三阶方阵行列式计算
-- `31` - 矩阵运算（加法、减法、乘法、转置）**← 新增功能**
+- `31` - 矩阵运算（加法、减法、乘法、转置）
 
 #### 💰 金融与数学模型
 - `32` - 常见数学模型计算（复利计算、半衰期计算、人口增长模型）
@@ -65,12 +65,12 @@ MHtoolX v2.1.0 是一个基于 Python 的命令行交互式数学计算工具，
 - `16` - 字符串频数统计&定位
 
 #### ⚙️ 系统与工具命令
-- `timer` - 启动计时器
+- `timer` - 启动计时器 **← 跨平台改进**
 - `version` - 查看版本
 - `cs` - 清空屏幕
 - `menu` - 查看分页菜单
 - `amenu` - 查看所有功能列表
-- `language` - 修改语言
+- `language` - 修改语言 **← 无需重启**
 - `exit` - 退出程序
 
 #### 💾 数据管理命令
@@ -88,7 +88,6 @@ MHtoolX v2.1.0 是一个基于 Python 的命令行交互式数学计算工具，
 **依赖模块**：
 ```python
 turtle
-keyboard
 math
 decimal
 json
@@ -100,16 +99,18 @@ fractions
 collections
 ```
 
-> 📌 若运行环境不支持 `turtle` 或 `keyboard`，相关功能会自动禁用并提示重启。
+> 📌 **跨平台兼容性改进**：
+> - 计时器功能现在使用 `curses` (Linux/macOS) 和 `msvcrt` (Windows) 模块，不再依赖 `keyboard` 模块
+> - 若运行环境不支持 `turtle`，相关图形功能会自动禁用
 
 ### 使用方法
 
 #### 1️⃣ 下载程序
-下载 `MHtoolX-v2.1.0.py` 和 `translation.json` 文件
+下载 `MHtoolX-v2.1.1.py` 和 `translation.json` 文件
 
 #### 2️⃣ 运行程序
 ```bash
-python MHtoolX-v2.1.0.py
+python MHtoolX-v2.1.1.py
 ```
 
 #### 3️⃣ 使用交互命令
@@ -169,19 +170,17 @@ python MHtoolX-v2.1.0.py
 3.0 6.0 
 ```
 
-#### 修改语言
+#### 修改语言（无需重启）
 ```
 请输入指令: language
 Select language / 选择语言 (1 for English, 2 for 中文): 1
 Language changed / 语言已更改
-The program needs to be restarted. Press the Enter key to continue
-程序需要重启，按回车键继续
 ```
 
 ### 文件结构
 ```
 .
-├── MHtoolX-v2.1.0.py    # 主程序文件
+├── MHtoolX-v2.1.1.py    # 主程序文件
 ├── translation.json      # 语言翻译配置
 ├── config.json           # 程序配置（自动生成）
 ├── history.json          # 操作历史（自动生成）
@@ -194,10 +193,15 @@ MIT License © 2025 QU QI
 
 ### 作者
 **作者:** QU QI  
-**版本:** MHtoolX v2.1.0  
-**发布日期:** 20251102
+**版本:** MHtoolX v2.1.1  
+**发布日期:** 2025
 
 ### 更新日志
+
+#### v2.1.1 主要更新：
+- **跨平台计时器**：使用 `curses` 和 `msvcrt` 模块替代 `keyboard`，支持Linux、macOS和Windows
+- **语言切换优化**：修改语言后无需重启程序，菜单即时刷新
+- **翻译改进**：修复了翻译键的格式问题，提升多语言体验
 
 #### v2.1.0 主要更新：
 - **矩阵转置功能**：在功能31中新增矩阵转置运算
@@ -214,7 +218,7 @@ MIT License © 2025 QU QI
 ## English Documentation
 
 ### Project Introduction
-MHtoolX v2.1.0 is a comprehensive Python-based command-line interactive mathematical calculation tool supporting 33+ mathematical functions, covering a wide range from basic arithmetic to advanced mathematical models. The tool provides **interactive menu navigation** and **result export functionality**, suitable for teaching, research, and learning purposes.
+MHtoolX v2.1.1 is a comprehensive Python-based command-line interactive mathematical calculation tool supporting 33+ mathematical functions, covering a wide range from basic arithmetic to advanced mathematical models. The tool provides **interactive menu navigation** and **result export functionality**, suitable for teaching, research, and learning purposes.
 
 ### Features
 
@@ -255,7 +259,7 @@ MHtoolX v2.1.0 is a comprehensive Python-based command-line interactive mathemat
 
 #### 📈 Matrix & Linear Algebra
 - `30` - Calculate 3x3 matrix determinant
-- `31` - Matrix operations (addition, subtraction, multiplication, **transposition**) **← New Feature**
+- `31` - Matrix operations (addition, subtraction, multiplication, transposition)
 
 #### 💰 Finance & Mathematical Models
 - `32` - Mathematical models (compound interest, half-life, population growth)
@@ -273,12 +277,12 @@ MHtoolX v2.1.0 is a comprehensive Python-based command-line interactive mathemat
 - `16` - String frequency statistics & positioning
 
 #### ⚙️ System & Utility Commands
-- `timer` - Start timer
+- `timer` - Start timer **← Cross-platform improved**
 - `version` - View version
 - `cs` - Clear screen
 - `menu` - View paged menu
 - `amenu` - View all functions list
-- `language` - Change language
+- `language` - Change language **← No restart required**
 - `exit` - Exit program
 
 #### 💾 Data Management Commands
@@ -296,7 +300,6 @@ MHtoolX v2.1.0 is a comprehensive Python-based command-line interactive mathemat
 **Required Modules**:
 ```python
 turtle
-keyboard
 math
 decimal
 json
@@ -308,16 +311,18 @@ fractions
 collections
 ```
 
-> 📌 If the runtime environment doesn't support `turtle` or `keyboard`, related functions will be automatically disabled with restart prompts.
+> 📌 **Cross-platform Compatibility Improvements**:
+> - Timer function now uses `curses` (Linux/macOS) and `msvcrt` (Windows) modules, no longer depends on `keyboard` module
+> - If the runtime environment doesn't support `turtle`, related graphics functions will be automatically disabled
 
 ### Usage
 
 #### 1️⃣ Download Program
-Download `MHtoolX-v2.1.0.py` and `translation.json` files
+Download `MHtoolX-v2.1.1.py` and `translation.json` files
 
 #### 2️⃣ Run Program
 ```bash
-python MHtoolX-v2.1.0.py
+python MHtoolX-v2.1.1.py
 ```
 
 #### 3️⃣ Use Interactive Commands
@@ -377,18 +382,17 @@ Result:
 3.0 6.0 
 ```
 
-#### Change Language
+#### Change Language (No Restart Required)
 ```
 Enter command: language
 Select language / 选择语言 (1 for English, 2 for 中文): 1
 Language changed / 语言已更改
-The program needs to be restarted. Press the Enter key to continue
 ```
 
 ### File Structure
 ```
 .
-├── MHtoolX-v2.1.0.py    # Main program file
+├── MHtoolX-v2.1.1.py    # Main program file
 ├── translation.json      # Language translation configuration
 ├── config.json           # Program configuration (auto-generated)
 ├── history.json          # Operation history (auto-generated)
@@ -401,10 +405,15 @@ MIT License © 2025 QU QI
 
 ### Author
 **Author:** QU QI  
-**Version:** MHtoolX v2.1.0  
-**Release Date:** 20251102
+**Version:** MHtoolX v2.1.1  
+**Release Date:** 2025
 
 ### Update Log
+
+#### v2.1.1 Major Updates:
+- **Cross-platform Timer**: Replaced `keyboard` with `curses` and `msvcrt` modules, supporting Linux, macOS and Windows
+- **Language Switching Optimization**: Language changes take effect immediately without program restart
+- **Translation Improvements**: Fixed translation key formatting issues, enhanced multilingual experience
 
 #### v2.1.0 Major Updates:
 - **Matrix Transposition**: Added matrix transposition operation in function 31
