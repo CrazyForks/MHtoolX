@@ -1,4 +1,4 @@
-# MHtoolX v2.1.1 / 多功能交互式数学工具
+# MHtoolX v2.2.0 / 多功能交互式数学工具
 
 [English](#english) | [中文](#chinese)
 
@@ -6,7 +6,7 @@
 ## 中文文档
 
 ### 项目简介
-MHtoolX v2.1.1 是一个基于 Python 的命令行交互式数学计算工具，支持33+种数学功能，涵盖从基础算术到高级数学模型的广泛领域。该工具提供 **交互式菜单导航** 与 **结果导出功能**，适合教学、科研及学习用途。
+MHtoolX v2.2.0 是一个基于 Python 的命令行交互式数学计算工具，支持34+种数学功能，涵盖从基础算术到高级数学模型的广泛领域。该工具提供 **交互式菜单导航** 与 **结果导出功能**，适合教学、科研及学习用途。
 
 ### 功能特性
 
@@ -44,6 +44,7 @@ MHtoolX v2.1.1 是一个基于 Python 的命令行交互式数学计算工具，
 #### ∫ 微积分与高级数学
 - `29` - 计算数值积分
 - `33` - 对数计算（自然对数和一般对数，使用泰勒展开法）
+- `34` - 计算数值导数 **← 新增功能**
 
 #### 📈 矩阵与线性代数
 - `30` - 三阶方阵行列式计算
@@ -65,12 +66,12 @@ MHtoolX v2.1.1 是一个基于 Python 的命令行交互式数学计算工具，
 - `16` - 字符串频数统计&定位
 
 #### ⚙️ 系统与工具命令
-- `timer` - 启动计时器 **← 跨平台改进**
+- `timer` - 启动计时器
 - `version` - 查看版本
 - `cs` - 清空屏幕
 - `menu` - 查看分页菜单
 - `amenu` - 查看所有功能列表
-- `language` - 修改语言 **← 无需重启**
+- `language` - 修改语言
 - `exit` - 退出程序
 
 #### 💾 数据管理命令
@@ -97,20 +98,19 @@ os
 sys
 fractions
 collections
+curses/msvcrt
 ```
 
-> 📌 **跨平台兼容性改进**：
-> - 计时器功能现在使用 `curses` (Linux/macOS) 和 `msvcrt` (Windows) 模块，不再依赖 `keyboard` 模块
 > - 若运行环境不支持 `turtle`，相关图形功能会自动禁用
 
 ### 使用方法
 
 #### 1️⃣ 下载程序
-下载 `MHtoolX-v2.1.1.py` 和 `translation.json` 文件
+下载 `MHtoolX-v2.2.0.py` 和 `translation.json` 文件
 
 #### 2️⃣ 运行程序
 ```bash
-python MHtoolX-v2.1.1.py
+python MHtoolX-v2.2.0.py
 ```
 
 #### 3️⃣ 使用交互命令
@@ -163,14 +163,27 @@ python MHtoolX-v2.1.1.py
 请依次输入方阵中的元素(从左往右): 4
 请依次输入方阵中的元素(从左往右): 5
 请依次输入方阵中的元素(从左往右): 6
-1.0 2.0 3.0 4.0 5.0 6.0 
+1.0 2.0 3.0
+4.0 5.0 6.0 
 结果:
 1.0 4.0 
 2.0 5.0 
 3.0 6.0 
 ```
 
-#### 修改语言（无需重启）
+#### 计算数值导数
+```
+请输入指令: 34
+您正在使用计算数值导数功能
+请输入函数表达式，使用x作为变量(可包括常数和特定函数，输入cons可查看所有支持的科学常数，输入func可查看所有支持的函数)
+示例：x**2 + 2*x + 1, math.sin(x), math.exp(x)
+函数 f(x) = x**2 + 2*x + 1
+请输入待求数值导数的函数在 x 轴上的求导位置: 2
+请输入您所需要的精度（10的倍数，越小越结果精确）: 1000
+f'(2)=6.000000000000003
+```
+
+#### 修改语言
 ```
 请输入指令: language
 Select language / 选择语言 (1 for English, 2 for 中文): 1
@@ -180,7 +193,7 @@ Language changed / 语言已更改
 ### 文件结构
 ```
 .
-├── MHtoolX-v2.1.1.py    # 主程序文件
+├── MHtoolX-v2.2.0.py    # 主程序文件
 ├── translation.json      # 语言翻译配置
 ├── config.json           # 程序配置（自动生成）
 ├── history.json          # 操作历史（自动生成）
@@ -193,10 +206,14 @@ MIT License © 2025 QU QI
 
 ### 作者
 **作者:** QU QI  
-**版本:** MHtoolX v2.1.1  
-**发布日期:** 2025
+**版本:** MHtoolX v2.2.0  
+**发布日期:** 20251106
 
 ### 更新日志
+
+#### v2.2.0 主要更新：
+- **新增数值导数计算功能**：添加功能34，使用中心差分法计算任意函数的数值导数
+- **微积分工具完善**：与数值积分功能形成完整的微积分工具集
 
 #### v2.1.1 主要更新：
 - **跨平台计时器**：使用 `curses` 和 `msvcrt` 模块替代 `keyboard`，支持Linux、macOS和Windows
@@ -218,7 +235,7 @@ MIT License © 2025 QU QI
 ## English Documentation
 
 ### Project Introduction
-MHtoolX v2.1.1 is a comprehensive Python-based command-line interactive mathematical calculation tool supporting 33+ mathematical functions, covering a wide range from basic arithmetic to advanced mathematical models. The tool provides **interactive menu navigation** and **result export functionality**, suitable for teaching, research, and learning purposes.
+MHtoolX v2.2.0 is a comprehensive Python-based command-line interactive mathematical calculation tool supporting 34+ mathematical functions, covering a wide range from basic arithmetic to advanced mathematical models. The tool provides **interactive menu navigation** and **result export functionality**, suitable for teaching, research, and learning purposes.
 
 ### Features
 
@@ -256,6 +273,7 @@ MHtoolX v2.1.1 is a comprehensive Python-based command-line interactive mathemat
 #### ∫ Calculus & Advanced Mathematics
 - `29` - Numerical integration
 - `33` - Logarithm calculation (natural and general logarithms using Taylor expansion)
+- `34` - Compute numerical derivatives **← New Feature**
 
 #### 📈 Matrix & Linear Algebra
 - `30` - Calculate 3x3 matrix determinant
@@ -277,12 +295,12 @@ MHtoolX v2.1.1 is a comprehensive Python-based command-line interactive mathemat
 - `16` - String frequency statistics & positioning
 
 #### ⚙️ System & Utility Commands
-- `timer` - Start timer **← Cross-platform improved**
+- `timer` - Start timer 
 - `version` - View version
 - `cs` - Clear screen
 - `menu` - View paged menu
 - `amenu` - View all functions list
-- `language` - Change language **← No restart required**
+- `language` - Change language
 - `exit` - Exit program
 
 #### 💾 Data Management Commands
@@ -309,20 +327,19 @@ os
 sys
 fractions
 collections
+curses/msvcrt
 ```
 
-> 📌 **Cross-platform Compatibility Improvements**:
-> - Timer function now uses `curses` (Linux/macOS) and `msvcrt` (Windows) modules, no longer depends on `keyboard` module
 > - If the runtime environment doesn't support `turtle`, related graphics functions will be automatically disabled
 
 ### Usage
 
 #### 1️⃣ Download Program
-Download `MHtoolX-v2.1.1.py` and `translation.json` files
+Download `MHtoolX-v2.2.0.py` and `translation.json` files
 
 #### 2️⃣ Run Program
 ```bash
-python MHtoolX-v2.1.1.py
+python MHtoolX-v2.2.0.py
 ```
 
 #### 3️⃣ Use Interactive Commands
@@ -375,14 +392,27 @@ Now for row 2
 Please enter matrix elements (left to right): 4
 Please enter matrix elements (left to right): 5
 Please enter matrix elements (left to right): 6
-1.0 2.0 3.0 4.0 5.0 6.0 
+1.0 2.0 3.0
+4.0 5.0 6.0 
 Result:
 1.0 4.0 
 2.0 5.0 
 3.0 6.0 
 ```
 
-#### Change Language (No Restart Required)
+#### Compute Numerical Derivatives
+```
+Enter command: 34
+You are using Computing numerical derivatives function
+Please enter function expression using x as variable (can include constants and specific functions, enter 'cons' to view supported constants, 'func' to view supported functions)
+Example: x**2 + 2*x + 1, math.sin(x), math.exp(x)
+Function f(x) = x**2 + 2*x + 1
+Please enter the differentiation point on the x-axis for the function whose numerical derivative is to be calculated: 2
+Please enter the required precision (multiple of 10, smaller values yield more accurate results): 1000
+f'(2)=6.000000000000003
+```
+
+#### Change Language
 ```
 Enter command: language
 Select language / 选择语言 (1 for English, 2 for 中文): 1
@@ -392,7 +422,7 @@ Language changed / 语言已更改
 ### File Structure
 ```
 .
-├── MHtoolX-v2.1.1.py    # Main program file
+├── MHtoolX-v2.2.0.py    # Main program file
 ├── translation.json      # Language translation configuration
 ├── config.json           # Program configuration (auto-generated)
 ├── history.json          # Operation history (auto-generated)
@@ -405,10 +435,14 @@ MIT License © 2025 QU QI
 
 ### Author
 **Author:** QU QI  
-**Version:** MHtoolX v2.1.1  
-**Release Date:** 2025
+**Version:** MHtoolX v2.2.0  
+**Release Date:** 20251106
 
 ### Update Log
+
+#### v2.2.0 Major Updates:
+- **New Numerical Derivative Calculation**: Added function 34 for computing numerical derivatives of arbitrary functions using central difference method
+- **Calculus Toolkit Enhancement**: Forms a complete calculus toolkit together with numerical integration function
 
 #### v2.1.1 Major Updates:
 - **Cross-platform Timer**: Replaced `keyboard` with `curses` and `msvcrt` modules, supporting Linux, macOS and Windows
