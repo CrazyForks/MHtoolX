@@ -1,8 +1,8 @@
 # MHtoolX v2.2.1 / 多功能交互式数学工具
 
-[English](https://www.google.com/search?q=%23english) | [中文](https://www.google.com/search?q=%23chinese)
+[English](#english) | [中文](#chinese)
 
-\<a name="chinese"\>\</a\>
+<a name="chinese"></a>
 
 ## 中文文档
 
@@ -267,7 +267,7 @@ MIT License © 2025 QU QI
 
 -----
 
-\<a name="english"\>\</a\>
+<a name="english"></a>
 
 ## English Documentation
 
