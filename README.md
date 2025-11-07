@@ -1,4 +1,4 @@
-# MHtoolX v2.2.1 / 多功能交互式数学工具
+# MHtoolX v2.2.2 / 多功能交互式数学工具
 
 [English](#english) | [中文](#chinese)
 
@@ -8,7 +8,7 @@
 
 ### 项目简介
 
-MHtoolX v2.2.1 是一个基于 Python 的命令行交互式数学计算工具，支持34+种数学功能，涵盖从基础算术到高级数学模型的广泛领域。该工具提供 **交互式菜单导航** 与 **结果导出功能**，适合教学、科研及学习用途。
+MHtoolX v2.2.2 是一个基于 Python 的命令行交互式数学计算工具，支持34+种数学功能，涵盖从基础算术到高级数学模型的广泛领域。该工具提供 **交互式菜单导航** 与 **结果导出功能**，适合教学、科研及学习用途。
 
 ### 功能特性
 
@@ -52,7 +52,7 @@ MHtoolX v2.2.1 是一个基于 Python 的命令行交互式数学计算工具，
 
   - `29` - 计算数值积分
   - `33` - 对数计算（自然对数和一般对数，使用泰勒展开法）
-  - `34` - 计算数值导数 **← 新增功能**
+  - `34` - 计算数值导数
 
 #### 📈 矩阵与线性代数
 
@@ -117,18 +117,18 @@ collections
 curses/msvcrt
 ```
 
->   - 若运行环境不支持 `turtle`，相关图形功能会自动禁用
+>     - 若运行环境不支持 `turtle`，相关图形功能会自动禁用
 
 ### 使用方法
 
 #### 1️⃣ 下载程序
 
-下载 `MHtoolX-v2.2.1.py` 和 `translation.json` 文件
+下载 `MHtoolX-v2.2.2.py` 和 `translation.json` 文件
 
 #### 2️⃣ 运行程序
 
 ```bash
-python MHtoolX-v2.2.1.py
+python MHtoolX-v2.2.2.py
 ```
 
 #### 3️⃣ 使用交互命令
@@ -139,7 +139,7 @@ python MHtoolX-v2.2.1.py
   - 是否保存操作历史
   - 是否启用计算结果保存功能
   - 是否启用图像保存功能
-  - 是否启用number\_saved计数功能
+  - 是否启用number_saved计数功能
 
 配置完成后，输入功能编号或命令即可使用相应功能。
 
@@ -180,17 +180,17 @@ python MHtoolX-v2.2.1.py
 请依次输入方阵中的元素(从左往右): 1
 请依次输入方阵中的元素(从左往右): 2
 请依次输入方阵中的元素(从左往右): 3
-1.0 2.0 3.0 
+1.0 2.0 3.0 
 现在为第2行
 请依次输入方阵中的元素(从左往右): 4
 请依次输入方阵中的元素(从左往右): 5
 请依次输入方阵中的元素(从左往右): 6
 1.0 2.0 3.0
-4.0 5.0 6.0 
+4.0 5.0 6.0 
 结果:
-1.0 4.0 
-2.0 5.0 
-3.0 6.0 
+1.0 4.0 
+2.0 5.0 
+3.0 6.0 
 ```
 
 #### 计算数值导数
@@ -218,12 +218,12 @@ Language changed / 语言已更改
 
 ```
 .
-├── MHtoolX-v2.2.1.py    # 主程序文件
-├── translation.json      # 语言翻译配置
-├── config.json           # 程序配置（自动生成）
-├── history.json          # 操作历史（自动生成）
-├── result.json           # 计算结果（自动生成）
-└── number saved.json     # 保存计数（可选生成）
+├── MHtoolX-v2.2.2.py    # 主程序文件
+├── translation.json      # 语言翻译配置
+├── config.json           # 程序配置（自动生成）
+├── history.json          # 操作历史（自动生成）
+├── result.json           # 计算结果（自动生成）
+└── number saved.json     # 保存计数（可选生成）
 ```
 
 ### 许可证
@@ -232,11 +232,15 @@ MIT License © 2025 QU QI
 
 ### 作者
 
-**作者:** QU QI  
-**版本:** MHtoolX v2.2.1  
-**发布日期:** 20251106
+**作者:** QU QI  
+**版本:** MHtoolX v2.2.2  
+**发布日期:** 20251108
 
 ### 更新日志
+
+#### v2.2.2 主要更新 (错误修复):
+
+  - **正确性修复 (功能 9)**：修复了在统计功能(模式6)中，当数据包含多个众数且频率相同时（例如 [1, 1, 2, 2]），程序错误地报告"不存在众数"的问题。
 
 #### v2.2.1 主要更新 (错误修复)：
 
@@ -273,7 +277,7 @@ MIT License © 2025 QU QI
 
 ### Project Introduction
 
-MHtoolX v2.2.1 is a comprehensive Python-based command-line interactive mathematical calculation tool supporting 34+ mathematical functions, covering a wide range from basic arithmetic to advanced mathematical models. The tool provides **interactive menu navigation** and **result export functionality**, suitable for teaching, research, and learning purposes.
+MHtoolX v2.2.2 is a comprehensive Python-based command-line interactive mathematical calculation tool supporting 34+ mathematical functions, covering a wide range from basic arithmetic to advanced mathematical models. The tool provides **interactive menu navigation** and **result export functionality**, suitable for teaching, research, and learning purposes.
 
 ### Features
 
@@ -317,7 +321,7 @@ MHtoolX v2.2.1 is a comprehensive Python-based command-line interactive mathemat
 
   - `29` - Numerical integration
   - `33` - Logarithm calculation (natural and general logarithms using Taylor expansion)
-  - `34` - Compute numerical derivatives **← New Feature**
+  - `34` - Compute numerical derivatives
 
 #### 📈 Matrix & Linear Algebra
 
@@ -345,7 +349,7 @@ MHtoolX v2.2.1 is a comprehensive Python-based command-line interactive mathemat
 
 #### ⚙️ System & Utility Commands
 
-  - `timer` - Start timer 
+  - `timer` - Start timer 
   - `version` - View version
   - `cs` - Clear screen
   - `menu` - View paged menu
@@ -382,18 +386,18 @@ collections
 curses/msvcrt
 ```
 
->   - If the runtime environment doesn't support `turtle`, related graphics functions will be automatically disabled
+>     - If the runtime environment doesn't support `turtle`, related graphics functions will be automatically disabled
 
 ### Usage
 
 #### 1️⃣ Download Program
 
-Download `MHtoolX-v2.2.1.py` and `translation.json` files
+Download `MHtoolX-v2.2.2.py` and `translation.json` files
 
 #### 2️⃣ Run Program
 
 ```bash
-python MHtoolX-v2.2.1.py
+python MHtoolX-v2.2.2.py
 ```
 
 #### 3️⃣ Use Interactive Commands
@@ -404,7 +408,7 @@ After startup, the program will prompt for initial configuration:
   - Whether to save operation history
   - Whether to enable result saving
   - Whether to enable image saving
-  - Whether to enable number\_saved counting function
+  - Whether to enable number_saved counting function
 
 After configuration, enter function numbers or commands to use corresponding functions.
 
@@ -445,17 +449,17 @@ Now for row 1
 Please enter matrix elements (left to right): 1
 Please enter matrix elements (left to right): 2
 Please enter matrix elements (left to right): 3
-1.0 2.0 3.0 
+1.0 2.0 3.0 
 Now for row 2
 Please enter matrix elements (left to right): 4
 Please enter matrix elements (left to right): 5
 Please enter matrix elements (left to right): 6
 1.0 2.0 3.0
-4.0 5.0 6.0 
+4.0 5.0 6.0 
 Result:
-1.0 4.0 
-2.0 5.0 
-3.0 6.0 
+1.0 4.0 
+2.0 5.0 
+3.0 6.0 
 ```
 
 #### Compute Numerical Derivatives
@@ -483,12 +487,12 @@ Language changed / 语言已更改
 
 ```
 .
-├── MHtoolX-v2.2.1.py    # Main program file
-├── translation.json      # Language translation configuration
-├── config.json           # Program configuration (auto-generated)
-├── history.json          # Operation history (auto-generated)
-├── result.json           # Calculation results (auto-generated)
-└── number saved.json     # Save count (optional)
+├── MHtoolX-v2.2.2.py    # Main program file
+├── translation.json      # Language translation configuration
+├── config.json           # Program configuration (auto-generated)
+├── history.json          # Operation history (auto-generated)
+├── result.json           # Calculation results (auto-generated)
+└── number saved.json     # Save count (optional)
 ```
 
 ### License
@@ -497,11 +501,15 @@ MIT License © 2025 QU QI
 
 ### Author
 
-**Author:** QU QI  
-**Version:** MHtoolX v2.2.1  
-**Release Date:** 20251106
+**Author:** QU QI  
+**Version:** MHtoolX v2.2.2  
+**Release Date:** 20251108
 
 ### Update Log
+
+#### v2.2.2 Major Updates (Bug Fix):
+
+  - **Correctness Fix (Function 9)**: Fixed a bug in Statistics (mode 6) where the program incorrectly reported "No mode exists" for datasets with multiple modes of the same frequency (e.g., [1, 1, 2, 2]).
 
 #### v2.2.1 Major Updates (Bug Fix):
 
@@ -529,3 +537,4 @@ MIT License © 2025 QU QI
 
   - **Multi-language Support**: Added comprehensive English translation system
   - **Language Switching**: Real-time language switching without restart
+
